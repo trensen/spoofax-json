@@ -1,0 +1,16 @@
+module Main
+
+imports
+
+  Syntax
+  Analysis
+  Colorer
+  editor/Colorer.generated
+  
+
+language
+
+  extensions : json
+
+  provider : target/metaborg/stratego.ctree
+  provider : target/metaborg/stratego-javastrat.jar

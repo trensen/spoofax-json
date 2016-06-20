@@ -1,0 +1,39 @@
+module spoofax-json
+
+imports
+  
+  Common
+
+context-free start-symbols
+  
+  Start
+
+context-free syntax
+  
+  Start = JSONObject
+  Start = JSONArray
+  
+  JSONObject.JSONObject = <{
+  	<{ Pair "," }*>
+  }>
+  
+  JSONArray.JSONArray = <[
+  	<{ Value "," }*>
+  ]>
+
+  Pair.Pair = <<Key> : <Value>>
+    
+  Value = String
+  Value = Number 
+  Value = JSONObject
+  Value = JSONArray
+  Value = Bool
+  Value = Null
+  
+  // Additional sorts for coloring purposes
+  Number.Number = NUMBER
+  Key.Key = STRING
+  String.String = STRING
+  Bool.True = <true>
+  Bool.False = <false>
+  Null.Null = <null>

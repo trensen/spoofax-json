@@ -1,0 +1,11 @@
+module Colorer
+
+colorer
+  Number._ : darkgreen
+  Key._    : royalblue
+  String._ : red
+  Bool._   : darkorange
+  
+colorer
+	royalblue  =  65 105 225
+	darkorange = 238 118   0  bold

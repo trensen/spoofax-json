@@ -1,0 +1,56 @@
+module Common
+
+lexical syntax
+
+  NUMBER = INT
+  NUMBER = INT FRAC
+  NUMBER = INT EXP
+  NUMBER = INT FRAC EXP
+  
+  INT            = "-"? [0-9]+ 
+  FRAC           = "." [0-9]+
+  
+  // Exponents
+  EXP            = E [0-9]+
+  E = "e"
+  E = "e+"
+  E = "e-"
+  E = "E"
+  E = "E+"
+  E = "E-"
+  
+  STRING         = "\"" StringChar* "\"" 
+  StringChar     = ~[\"\\]
+  StringChar     = "\\\""
+  StringChar     = "\\\\"
+  StringChar     = "\\/"
+  StringChar     = "\\b"
+  StringChar     = "\\f"
+  StringChar     = "\\n"
+  StringChar     = "\\r"
+  StringChar     = "\\t"
+  
+  Hex            = [0-9] | [a-f]
+  // Unicode
+  StringChar     = "\\u" Hex Hex Hex Hex
+
+  LAYOUT         = [\ \t\n\r] 
+  EOF            =  
+
+lexical restrictions
+
+  // Ensure greedy matching for lexicals
+  
+  INT           -/- [0-9]
+  FRAC          -/- [0-9]
+  EXP           -/- [0-9]
+  
+  // EOF may not be followed by any char
+  
+  EOF           -/- ~[]
+
+context-free restrictions
+
+  // Ensure greedy matching for comments
+  
+  LAYOUT? -/- [\ \t\n\r]
