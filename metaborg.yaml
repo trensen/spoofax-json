@@ -1,6 +1,6 @@
 ---
 id: nl.timrensen:spoofax-json:0.0.1
-name: spoofax-json
+name: JSON
 metaborgVersion: 2.0.0-SNAPSHOT
 dependencies:
   compile:
@@ -32,3 +32,7 @@ language:
     - stratego-sdf
     - -la
     - strc
+exports:
+- directory: lib
+- language: Stratego-Sugar
+  directory: src-gen

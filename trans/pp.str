@@ -4,8 +4,8 @@ imports
 
   libstratego-gpp
   runtime/refactoring/-
-  pp/spoofax-json-parenthesize
-  pp/spoofax-json-pp
+  pp/JSON-parenthesize
+  pp/JSON-pp
 
 rules
 
@@ -18,25 +18,25 @@ rules
 
 rules
   
-  pp-spoofax-json-string =
-    parenthesize-spoofax-json
-    ; prettyprint-spoofax-json-start-symbols
+  pp-JSON-string =
+    parenthesize-JSON
+    ; prettyprint-JSON-start-symbols
     ; !V([], <id>)
     ; box2text-string(|120)
       
-  pp-partial-spoofax-json-string =
-    parenthesize-spoofax-json
-    ; prettyprint-spoofax-json
+  pp-partial-JSON-string =
+    parenthesize-JSON
+    ; prettyprint-JSON
     ; !V([], <id>)
     ; box2text-string(|120)
       
   pp-debug :
     ast -> result
     with
-       result := <pp-spoofax-json-string> ast
-    <+ <bottomup(try(not(is-string); not(is-list); not(pp-spoofax-json-string); debug(!"cannot pp ")))> ast
+       result := <pp-JSON-string> ast
+    <+ <bottomup(try(not(is-string); not(is-list); not(pp-JSON-string); debug(!"cannot pp ")))> ast
     ;  result := ""
 
 rules
   
-  construct-textual-change = construct-textual-change(pp-partial-spoofax-json-string, parenthesize, override-reconstruction, resugar)
+  construct-textual-change = construct-textual-change(pp-partial-JSON-string, parenthesize, override-reconstruction, resugar)

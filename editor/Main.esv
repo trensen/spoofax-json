@@ -5,8 +5,6 @@ imports
   Syntax
   Analysis
   Colorer
-  editor/Colorer.generated
-  
 
 language
 

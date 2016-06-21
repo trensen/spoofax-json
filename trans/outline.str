@@ -2,7 +2,7 @@ module outline
 
 imports
   
-  signatures/spoofax-json-sig
+  signatures/JSON-sig
   runtime/editor/outline-library
   runtime/editor/origins
 

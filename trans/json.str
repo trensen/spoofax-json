@@ -1,4 +1,4 @@
-module spoofax_json
+module json
 
 imports
   

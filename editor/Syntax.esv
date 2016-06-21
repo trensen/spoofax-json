@@ -3,7 +3,7 @@ module Syntax
 imports 
 
   editor/Colorer.generated
-  completion/colorer/spoofax-json-cc-esv
+  completion/colorer/JSON-cc-esv
 
 language
 
