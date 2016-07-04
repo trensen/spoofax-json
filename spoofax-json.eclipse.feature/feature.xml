@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="spoofax-json.eclipse.feature"
+      label="Spoofax JSON Language Editor"
+      version="0.0.1.qualifier">
+
+   <includes
+         id="org.metaborg.spoofax.eclipse.feature"
+         version="0.0.0"
+         optional="true"
+         search-location="both"/>
+
+   <includes
+         id="org.metaborg.spoofax.eclipse.meta.feature"
+         version="0.0.0"
+         optional="true"
+         search-location="both"/>
+
+   <plugin
+         id="spoofax-json.eclipse"
+         download-size="0"
+         install-size="0"
+         version="0.0.1.qualifier"/>
+
+</feature>

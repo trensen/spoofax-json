@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JSON language Eclipse plugin
+Bundle-SymbolicName: spoofax-json.eclipse;singleton:=true
+Bundle-Version: 0.0.1.qualifier
+Bundle-Vendor: metaborg.org
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.metaborg.spoofax.eclipse
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

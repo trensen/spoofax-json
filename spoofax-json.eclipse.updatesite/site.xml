@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/spoofax-json.eclipse.feature_0.0.1.qualifier.jar" id="spoofax-json.eclipse.feature" version="0.0.1.qualifier">
+      <category name="spoofax-json"/>
+   </feature>
+   <category-def name="spoofax-json" label="spoofax-json"/>
+</site>

@@ -1,5 +1,5 @@
 ---
-id: nl.timrensen:spoofax-json:0.0.1
+id: nl.timrensen:spoofax-json:0.0.1-SNAPSHOT
 name: JSON
 metaborgVersion: 2.0.0-SNAPSHOT
 dependencies:
