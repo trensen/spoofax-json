@@ -14,12 +14,13 @@ context-free syntax
   Start = JSONArray
   
   JSONObject.JSONObject = <{
-  	<{ Pair "," }*>
-  }>
+  <{ Pair ",\n" }*>
+}>
   
+  JSONArray.JSONArray = <[ ]> {prefer}
   JSONArray.JSONArray = <[
-  	<{ Value "," }*>
-  ]>
+  <{ Value ",\n" }*>
+]>
 
   Pair.Pair = <<Key> : <Value>>
     
